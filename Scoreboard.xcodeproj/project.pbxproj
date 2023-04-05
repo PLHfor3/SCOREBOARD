@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		586E5EA929D64E8F00CA172F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E5EA829D64E8F00CA172F /* AppDelegate.swift */; };
 		586E5EAB29D64E8F00CA172F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E5EAA29D64E8F00CA172F /* SceneDelegate.swift */; };
-		586E5EAD29D64E8F00CA172F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E5EAC29D64E8F00CA172F /* ViewController.swift */; };
 		586E5EB029D64E8F00CA172F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586E5EAE29D64E8F00CA172F /* Main.storyboard */; };
 		586E5EB229D64E9000CA172F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586E5EB129D64E9000CA172F /* Assets.xcassets */; };
 		586E5EB529D64E9000CA172F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586E5EB329D64E9000CA172F /* LaunchScreen.storyboard */; };
 		586E5EC029D64E9000CA172F /* ScoreboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E5EBF29D64E9000CA172F /* ScoreboardTests.swift */; };
 		586E5ECA29D64E9000CA172F /* ScoreboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E5EC929D64E9000CA172F /* ScoreboardUITests.swift */; };
 		586E5ECC29D64E9000CA172F /* ScoreboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E5ECB29D64E9000CA172F /* ScoreboardUITestsLaunchTests.swift */; };
+		586E5EDB29D6555D00CA172F /* TotalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E5EDA29D6555D00CA172F /* TotalScoreViewController.swift */; };
+		586E5EDD29D6556D00CA172F /* QuarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E5EDC29D6556D00CA172F /* QuarterViewController.swift */; };
+		586E5EDF29D6575100CA172F /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E5EDE29D6575000CA172F /* ScoreModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		586E5EA529D64E8F00CA172F /* Scoreboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scoreboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		586E5EA829D64E8F00CA172F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		586E5EAA29D64E8F00CA172F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		586E5EAC29D64E8F00CA172F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		586E5EAF29D64E8F00CA172F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		586E5EB129D64E9000CA172F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		586E5EB429D64E9000CA172F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		586E5EC529D64E9000CA172F /* ScoreboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		586E5EC929D64E9000CA172F /* ScoreboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardUITests.swift; sourceTree = "<group>"; };
 		586E5ECB29D64E9000CA172F /* ScoreboardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		586E5EDA29D6555D00CA172F /* TotalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoreViewController.swift; sourceTree = "<group>"; };
+		586E5EDC29D6556D00CA172F /* QuarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuarterViewController.swift; sourceTree = "<group>"; };
+		586E5EDE29D6575000CA172F /* ScoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 		586E5EA729D64E8F00CA172F /* Scoreboard */ = {
 			isa = PBXGroup;
 			children = (
+				586E5EDE29D6575000CA172F /* ScoreModel.swift */,
 				586E5EA829D64E8F00CA172F /* AppDelegate.swift */,
 				586E5EAA29D64E8F00CA172F /* SceneDelegate.swift */,
-				586E5EAC29D64E8F00CA172F /* ViewController.swift */,
 				586E5EAE29D64E8F00CA172F /* Main.storyboard */,
+				586E5EDA29D6555D00CA172F /* TotalScoreViewController.swift */,
+				586E5EDC29D6556D00CA172F /* QuarterViewController.swift */,
 				586E5EB129D64E9000CA172F /* Assets.xcassets */,
 				586E5EB329D64E9000CA172F /* LaunchScreen.storyboard */,
 				586E5EB629D64E9000CA172F /* Info.plist */,
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				586E5EAD29D64E8F00CA172F /* ViewController.swift in Sources */,
+				586E5EDF29D6575100CA172F /* ScoreModel.swift in Sources */,
 				586E5EA929D64E8F00CA172F /* AppDelegate.swift in Sources */,
+				586E5EDD29D6556D00CA172F /* QuarterViewController.swift in Sources */,
+				586E5EDB29D6555D00CA172F /* TotalScoreViewController.swift in Sources */,
 				586E5EAB29D64E8F00CA172F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
