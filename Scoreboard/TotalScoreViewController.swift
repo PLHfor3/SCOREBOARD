@@ -194,6 +194,7 @@ class TotalScoreViewController: UIViewController {
                 periodLabel.text = "PreG"
                 homePossArrow.isHidden = true
                 guestPossArrow.isHidden = true
+                print()
             case 5:
                 periodLabel.text = "Half"
             case 6:
