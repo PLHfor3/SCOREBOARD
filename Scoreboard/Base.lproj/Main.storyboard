@@ -137,15 +137,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSS-8y-4QG">
-                                <rect key="frame" x="71" y="305" width="68" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
-                                <connections>
-                                    <action selector="resetButton:" destination="Sbe-wo-WWv" eventType="touchUpInside" id="S8v-Bo-gIg"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5p-gk-Y9m">
                                 <rect key="frame" x="136" y="131" width="95" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -153,6 +144,69 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU6-o2-hJx">
+                                <rect key="frame" x="555" y="304" width="109" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear Fouls"/>
+                                <connections>
+                                    <action selector="clearFouls:" destination="Sbe-wo-WWv" eventType="touchUpInside" id="Izz-G7-9XS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jB9-fF-dI5">
+                                <rect key="frame" x="696" y="305" width="112" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset TOLs"/>
+                                <connections>
+                                    <action selector="resetTOLs:" destination="Sbe-wo-WWv" eventType="touchUpInside" id="0oh-4Q-OTu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSS-8y-4QG">
+                                <rect key="frame" x="146" y="304" width="68" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="Sbe-wo-WWv" eventType="touchUpInside" id="S8v-Bo-gIg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-6r-unA">
+                                <rect key="frame" x="205" y="20" width="95" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="PreGame"/>
+                                <connections>
+                                    <action selector="setQuarter:" destination="Sbe-wo-WWv" eventType="touchUpInside" id="plS-pT-VyT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix5-Qw-diX">
+                                <rect key="frame" x="352" y="19" width="88" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Halftime"/>
+                                <connections>
+                                    <action selector="setQuarter:" destination="Sbe-wo-WWv" eventType="touchUpInside" id="gDl-gS-bzh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIz-Vz-N2I">
+                                <rect key="frame" x="502" y="18" width="68" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Break"/>
+                                <connections>
+                                    <action selector="setQuarter:" destination="Sbe-wo-WWv" eventType="touchUpInside" id="Hmo-Bu-Q6D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puY-5O-A68">
+                                <rect key="frame" x="652" y="18" width="60" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Final"/>
+                                <connections>
+                                    <action selector="setQuarter:" destination="Sbe-wo-WWv" eventType="touchUpInside" id="wsW-2M-P1R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bbC-7L-WvK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -225,12 +279,16 @@
                                     <outletCollection property="gestureRecognizers" destination="kmN-sj-4AV" appends="YES" id="KHx-pQ-f27"/>
                                 </connections>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1st" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjL-n1-b2M">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1st" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjL-n1-b2M">
                                 <rect key="frame" x="356" y="206" width="140" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="52"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="o2s-m2-lW3" appends="YES" id="oZl-zK-m2T"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I4-1P-ka6">
                                 <rect key="frame" x="614" y="120" width="94" height="71"/>
@@ -248,6 +306,68 @@
                                     <action selector="setClock:" destination="sp9-Fj-MHJ" eventType="touchUpInside" id="967-E7-KzX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOL 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZd-BR-SkK">
+                                <rect key="frame" x="119" y="36" width="57" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cBI-UX-uI2" appends="YES" id="Qf1-we-Y5r"/>
+                                    <outletCollection property="gestureRecognizers" destination="p0w-og-0mt" appends="YES" id="SSZ-23-BW8"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FOULS 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOw-7l-v6t">
+                                <rect key="frame" x="199" y="36" width="98" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Pm5-VA-VDP" appends="YES" id="MeN-0e-Uwu"/>
+                                    <outletCollection property="gestureRecognizers" destination="0r0-jO-yAH" appends="YES" id="GV7-71-aVn"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FOULS 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msr-A9-UZM">
+                                <rect key="frame" x="586" y="36" width="98" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MrZ-1n-DMc" appends="YES" id="YZ8-Nn-TZT"/>
+                                    <outletCollection property="gestureRecognizers" destination="4Gq-lV-dWI" appends="YES" id="KCD-BE-zIP"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOL 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8B-kO-WU0">
+                                <rect key="frame" x="716" y="36" width="57" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="v0h-dD-KAJ" appends="YES" id="yRr-8B-cka"/>
+                                    <outletCollection property="gestureRecognizers" destination="gpb-gO-Kcn" appends="YES" id="I6p-qD-tkT"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhB-Pz-ba5">
+                                <rect key="frame" x="328" y="229" width="30" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igC-UL-I93">
+                                <rect key="frame" x="504" y="229" width="30" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ryg-F0-i1R"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -255,8 +375,14 @@
                     <tabBarItem key="tabBarItem" title="Game View" id="Yx5-Vt-qku" userLabel="Game View"/>
                     <connections>
                         <outlet property="gameClock" destination="lrH-Vf-5rL" id="JGD-C7-m1Y"/>
+                        <outlet property="guestFouls" destination="msr-A9-UZM" id="YUf-9r-Zu7"/>
+                        <outlet property="guestPossArrow" destination="igC-UL-I93" id="YaD-gW-WDW"/>
                         <outlet property="guestScore" destination="5eb-5y-6uD" id="awc-H3-LQa"/>
+                        <outlet property="guestTimeouts" destination="W8B-kO-WU0" id="Stm-6q-iub"/>
+                        <outlet property="homeFouls" destination="VOw-7l-v6t" id="mvY-BA-TB3"/>
+                        <outlet property="homePossArrow" destination="HhB-Pz-ba5" id="UzB-Lg-UMn"/>
                         <outlet property="homeScore" destination="WUL-Mc-OQ4" id="lCQ-Un-dAv"/>
+                        <outlet property="homeTimouts" destination="pZd-BR-SkK" id="zd6-xU-HCN"/>
                         <outlet property="periodLabel" destination="PjL-n1-b2M" id="LgE-YO-TOF"/>
                     </connections>
                 </viewController>
@@ -281,9 +407,54 @@
                         <action selector="subtractGuestScore:" destination="sp9-Fj-MHJ" id="8O8-bp-XZ2"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <tapGestureRecognizer id="kmN-sj-4AV">
+                <tapGestureRecognizer id="kmN-sj-4AV" userLabel="Game Clock Tap">
                     <connections>
                         <action selector="clockStartStop:" destination="sp9-Fj-MHJ" id="5vY-9A-2Ne"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Pm5-VA-VDP" userLabel="Home Fouls Tap">
+                    <connections>
+                        <action selector="addHomeFoul:" destination="sp9-Fj-MHJ" id="2c9-Sb-uIX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="0r0-jO-yAH" userLabel="Home Fouls Down">
+                    <connections>
+                        <action selector="subtractHomeFoul:" destination="sp9-Fj-MHJ" id="jQf-iF-uzy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="cBI-UX-uI2" userLabel="Home TOL Tap">
+                    <connections>
+                        <action selector="subtractHomeTImeout:" destination="sp9-Fj-MHJ" id="dvp-8Y-czX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="p0w-og-0mt" userLabel="Home TOL Up">
+                    <connections>
+                        <action selector="addHomeTOL:" destination="sp9-Fj-MHJ" id="LeP-Ri-qBV"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="MrZ-1n-DMc" userLabel="Guest Fouls Tap">
+                    <connections>
+                        <action selector="addGuestFoul:" destination="sp9-Fj-MHJ" id="9VS-U6-agL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="4Gq-lV-dWI" userLabel="Guest Fouls Down">
+                    <connections>
+                        <action selector="subtractGuestFoul:" destination="sp9-Fj-MHJ" id="B1F-Z8-Ygj"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="v0h-dD-KAJ" userLabel="Guest TOL Tap">
+                    <connections>
+                        <action selector="subtractGuestTImeout:" destination="sp9-Fj-MHJ" id="Dcs-39-cQx"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="gpb-gO-Kcn" userLabel="Guest TOL Up">
+                    <connections>
+                        <action selector="addHGuestTOL:" destination="sp9-Fj-MHJ" id="97z-U6-ssj"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="o2s-m2-lW3" userLabel="Possession Arrow Tap">
+                    <connections>
+                        <action selector="togglePossArrow:" destination="sp9-Fj-MHJ" id="GIM-i3-Sm3"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

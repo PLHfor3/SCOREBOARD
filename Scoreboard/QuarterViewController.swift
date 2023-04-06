@@ -50,7 +50,24 @@ class QuarterViewController: UIViewController {
         model.vQtrScores[1] = 0
         model.vQtrScores[2] = 0
         model.vQtrScores[3] = 0
+        model.hFouls = 0
+        model.vFouls = 0
+        model.hTOL = 4
+        model.vTOL = 4
+        model.currentQuarter = 4
         updateLabels()
+        model.seconds = 600
+    }
+    
+    
+    @IBAction func clearFouls(_ sender: Any) {
+        model.hFouls = 0
+        model.vFouls = 0
+    }
+    
+    @IBAction func resetTOLs(_ sender: Any) {
+        model.hTOL = 4
+        model.vTOL = 4
     }
     
     

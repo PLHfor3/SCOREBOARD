@@ -12,7 +12,6 @@ class TotalScoreViewController: UIViewController {
     var model: ScoreModel!
     
     var timer = Timer()
-    var tenthSeconds = 600.1
     var isTimerRunning = false
     
     
@@ -20,6 +19,29 @@ class TotalScoreViewController: UIViewController {
     @IBOutlet weak var guestScore: UILabel!
     @IBOutlet weak var periodLabel: UILabel!
     @IBOutlet weak var gameClock: UILabel!
+    @IBOutlet weak var homeTimouts: UILabel!
+    @IBOutlet weak var homeFouls: UILabel!
+    @IBOutlet weak var guestFouls: UILabel!
+    @IBOutlet weak var guestTimeouts: UILabel!
+    @IBOutlet weak var homePossArrow: UILabel!
+    @IBOutlet weak var guestPossArrow: UILabel!
+    
+    
+    @IBAction func togglePossArrow(_ sender: Any) {
+        if model.possArrow == false {
+            homePossArrow.isHidden = true
+            guestPossArrow.isHidden = false
+            model.possArrow = true
+        }
+        else {
+            homePossArrow.isHidden = false
+            guestPossArrow.isHidden = true
+            model.possArrow = false
+        }
+    }
+    
+    
+    
     
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: (#selector(TotalScoreViewController.updateTimer)), userInfo: nil, repeats: true)
@@ -27,12 +49,12 @@ class TotalScoreViewController: UIViewController {
     }
     
     @objc func updateTimer() {
-        if tenthSeconds < 0.1 {
+        if model.seconds < 0.1 {
             timer.invalidate()
             //Send alert to indicate time's up.
         } else {
-            tenthSeconds -= 0.1
-            gameClock.text = timeString(time: TimeInterval(tenthSeconds))
+            model.seconds -= 0.1
+            gameClock.text = timeString(time: TimeInterval(model.seconds))
         }
         
     }
@@ -41,16 +63,16 @@ class TotalScoreViewController: UIViewController {
             let hours = Int(time) / 3600
             let minutes = Int(time) / 60 % 60
             let seconds = Int(time) % 60
-            if self.tenthSeconds > 59.9 {
+            if model.seconds > 59.9 {
                 if minutes < 10 {
                     return String(format:"%01i:%02i", minutes, seconds)
                 }
                 return String(format:"%02i:%02i", minutes, seconds)
             }
-            if self.tenthSeconds >= 10.0{
-                return String(format:"%02.1f", self.tenthSeconds)
+            if model.seconds >= 10.0{
+                return String(format:"%02.1f", model.seconds)
             }
-            return "0" + String(format:"%02.1f", self.tenthSeconds)
+            return "0" + String(format:"%02.1f", model.seconds)
         }
         
         @IBAction func clockStartStop(_ sender: Any) {
@@ -85,10 +107,59 @@ class TotalScoreViewController: UIViewController {
             model.modifyVScore(by: -1)
             updateScores()
         }
-        
-        @IBAction func toggleGameClock(_ sender: Any) {
-            
-        }
+    
+    
+    @IBAction func addHomeFoul(_ sender: Any) {
+        model.modifyHFoul(by: 1)
+        updateScores()
+    }
+    
+    
+    @IBAction func subtractHomeFoul(_ sender: Any) {
+        model.modifyHFoul(by: -1)
+        updateScores()
+    }
+    
+    
+    @IBAction func subtractHomeTImeout(_ sender: Any) {
+        model.modifyHTimeouts(by: -1)
+        updateScores()
+    }
+    
+    
+    @IBAction func addHomeTOL(_ sender: Any) {
+        model.modifyHTimeouts(by: 1)
+        updateScores()
+    }
+    
+    @IBAction func addGuestFoul(_ sender: Any) {
+        model.modifyVFoul(by: 1)
+        updateScores()
+    }
+    
+    
+    @IBAction func subtractGuestFoul(_ sender: Any) {
+        model.modifyVFoul(by: -1)
+        updateScores()
+    }
+    
+    
+    @IBAction func subtractGuestTImeout(_ sender: Any) {
+        model.modifyVTimeouts(by: -1)
+        updateScores()
+    }
+    
+    
+    @IBAction func addHGuestTOL(_ sender: Any) {
+        model.modifyVTimeouts(by: 1)
+        updateScores()
+    }
+    
+    
+    
+    
+    
+    
     
     @IBAction func setClock(_ sender: Any) {
         let alert = UIAlertController(title: "Scoreboard", message: "Please set the clock in seconds", preferredStyle: .alert)
@@ -98,7 +169,7 @@ class TotalScoreViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { [weak alert] (_) in
             guard let textField = alert?.textFields?[0], let userText = textField.text else { return }
             if let theUserText = Double(userText) {
-                self.tenthSeconds = Double(theUserText) + 0.1
+                self.model.seconds = Double(theUserText) + 0.1
                 self.updateTimer()
             }
         }))
@@ -119,14 +190,30 @@ class TotalScoreViewController: UIViewController {
                 periodLabel.text = "3rd"
             case 3:
                 periodLabel.text = "4th"
+            case 4:
+                periodLabel.text = "PreG"
+                homePossArrow.isHidden = true
+                guestPossArrow.isHidden = true
+            case 5:
+                periodLabel.text = "Half"
+            case 6:
+                periodLabel.text = "Break"
+            case 7:
+                periodLabel.text = "Final"
+                homePossArrow.isHidden = true
+                guestPossArrow.isHidden = true
             default:
                 periodLabel.text = "Err"
             }
+            homeFouls.text = "FOULS\n" + String(model.hFouls)
+            homeTimouts.text = "TOL\n" + String(model.hTOL)
+            guestFouls.text = "FOULS\n" + String(model.vFouls)
+            guestTimeouts.text = "TOL\n" + String(model.vTOL)
         }
         
         override func viewWillAppear(_ animated: Bool) {
             updateScores()
-            updateTimer()
+            gameClock.text = timeString(time: TimeInterval(model.seconds))
         }
         
         
