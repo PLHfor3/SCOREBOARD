@@ -67,7 +67,7 @@ class ScoreModel {
     func modifyVScore(by: Int) {
         if currentQuarter >= 0 && currentQuarter <= 3 {
             if vTotalScore > 0 || by > 0 {
-                if hTotalScore < 199 {
+                if vTotalScore < 199 {
                     vQtrScores[currentQuarter] += by
                     return
                 }
